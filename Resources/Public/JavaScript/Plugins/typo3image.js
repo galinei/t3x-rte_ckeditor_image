@@ -510,7 +510,7 @@ export default class Typo3Image extends Core.Plugin {
         });
 
 
-        editor.ui.componentFactory.add('image', () => {
+        editor.ui.componentFactory.add('insertImage', () => {
             const button = new UI.ButtonView();
 
             button.set({
