@@ -75,7 +75,7 @@ class SelectImageController extends ElementBrowserController
             $bparams = explode('|', $queryParams['bparams']);
 
             if (isset($bparams[3]) && ($bparams[3] === '')) {
-                $bparams[3] = $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'];
+                $bparams[3] = $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext'] . ';php';
                 $queryParams['bparams'] = implode('|', $bparams);
             }
         }
