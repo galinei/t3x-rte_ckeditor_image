@@ -252,7 +252,11 @@ class RteImagesDbHook
             if (!array_key_exists('enableRichtext', $tcaFieldConf) || $tcaFieldConf['enableRichtext'] === false) {
                 continue;
             }
-
+            
+            // Ignore null fields
+            if ($fieldValue === null) {
+                continue;
+            }
             $fieldArray[$field] = $this->modifyRteField($fieldValue);
         }
     }
